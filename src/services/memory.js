@@ -1,0 +1,11 @@
+const API_URL = "http://localhost:3000";
+
+const getMemories = async() => {
+    const response = await fetch(`${API_URL}/memories`);// Busquei os Dados
+
+    const memories = await response.json();// Converto a requisicao para JSON.
+
+    return memories ;
+}
+
+export default {getMemories};
